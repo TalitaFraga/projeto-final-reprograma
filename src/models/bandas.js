@@ -6,7 +6,7 @@ const bandasSchema = new mongoose.Schema({
     estilo: {type: String},
     instagram:{type: String},
     twitter:{type: String},
-    localOndeToca:{type:String}
+    localOndeToca:[{type:String}]
 })
 
 const bandas = mongoose.model('bandas', bandasSchema)
