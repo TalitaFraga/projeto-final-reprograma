@@ -15,22 +15,37 @@ const authorizeAndRun = (req, res, doAction) => {
 
     jwt.verify(token, SECRET, function(erro) {
         if(erro) {
-        return res.status(403).send('Authorization is not valid')
+            return res.status(403).send('Authorization is not valid')
         }
 
         doAction() 
     })
 }
 
+
+
 const getAll = (req, res) => {
-    authorizeAndRun(req, res, () => {
-        bands.find(function(err, bands) {
-            if(err) {
-                res.status(500).send({ message:err.message})
-            }
-            res.status(200).send(bands)
-        })
+    const searchParams = {}
+    if (req.query.style) {
+        searchParams.style = req.query.style
+    }
+    if(req.query.name) {
+        searchParams.name = req.query.name
+    }
+    if(req.query.city) {
+        searchParams.city = req.query.city
+    }
+    if(req.query.venue) {
+        searchParams.venue = req.query.venue
+    }
+
+    bands.find(searchParams, function(err, bands) {
+        if(err) {
+            res.status(500).send({ message:err.message})
+        }
+        res.status(200).send(bands)
     })
+    
 }
 
 const postBand = (req, res) => {
@@ -48,11 +63,11 @@ const postBand = (req, res) => {
 
 const deleteBand = (req, res) => {
     authorizeAndRun(req, res, () => {
-        const id = req.params.name
+        const id = req.params.id
 
-        bands.find({ name }, function(err, band) {
+        bands.find({ id }, function(err, band) {
             if(band.length > 0){
-                bands.deleteMany({ name }, function(err) {
+                bands.deleteMany({ id }, function(err) {
                     if(err) {
                         res.status(500).send({
                             message: err.message,

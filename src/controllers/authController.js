@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const SECRET = process.env.SECRET
 
-const postBands = (req, res) => {
+const signup = (req, res) => {
     const passwordHash = bcrypt.hashSync(req.body.password, 10)
     req.body.password = passwordHash
     let band = new bandUser(req.body)
@@ -32,4 +32,4 @@ const login = (req, res) => {
     })
 }
 
-module.exports = { postBands, login }
+module.exports = { signup, login }
