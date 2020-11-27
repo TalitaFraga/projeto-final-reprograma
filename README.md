@@ -109,13 +109,13 @@ body:
         "twitter": "-",
         "venue": "Hard Rock Café Fortaleza"
         
-    } ```
+    }
     
 
 response:
     201: a banda foi criada
       payload: 
-        ``` {
+        {
         "name":"SoulSin",
         "city": "Fortaleza", 
         "style": "Pop Rock",
