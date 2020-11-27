@@ -101,7 +101,7 @@ http://localhost:8080/bands?venue=rock n ribs
  Para criação, você precisará de autorização. O parâmetro "Authorization" do header precisa estar preenchido.
 
 body:
-    ```json
+    ```
     {
         "name":"SoulSin",
         "city": "Fortaleza", 
@@ -109,7 +109,6 @@ body:
         "instagram": "@soulsinband",
         "twitter": "-",
         "venue": "Hard Rock Café Fortaleza"
-        
     }
     ```
     
@@ -118,14 +117,13 @@ response:
     201: a banda foi criada
       payload: 
     ```
-        {
+    {
         "name":"SoulSin",
         "city": "Fortaleza", 
         "style": "Pop Rock",
         "instagram": "@soulsinband",
         "twitter": "-",
         "venue": "Hard Rock Café Fortaleza"
-        
     } 
     ```
 
