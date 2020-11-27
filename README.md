@@ -109,8 +109,8 @@ body:
         "twitter": "-",
         "venue": "Hard Rock Café Fortaleza"
         
-    }
-    ```
+    } ```
+    
 
 response:
     201: a banda foi criada
@@ -123,8 +123,8 @@ response:
         "twitter": "-",
         "venue": "Hard Rock Café Fortaleza"
         
-    }
-    ```
+    } ```
+
         500: Authorization header missing
 
  - Delete:
