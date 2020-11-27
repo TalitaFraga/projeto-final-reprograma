@@ -101,7 +101,7 @@ http://localhost:8080/bands?venue=rock n ribs
  Para criação, você precisará de autorização. O parâmetro "Authorization" do header precisa estar preenchido.
 
 body:
-    ```
+    ```json
     {
         "name":"SoulSin",
         "city": "Fortaleza", 
