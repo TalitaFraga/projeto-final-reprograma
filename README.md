@@ -12,7 +12,7 @@ query params: pode ser feita a busca por style, name, city e veneu
 
 http://localhost:8080/bands
 retorna um Json:
-[
+```[
     {
         "venue": [
             "rock n ribs",
@@ -25,8 +25,8 @@ retorna um Json:
         "instagram": "@papaninfa_oficial",
         "twitter": "-",
         "__v": 0
-    },
-    {
+    }```,
+    ```{
         "venue": [
             "Mafuá do Januário",
             "riomar"
@@ -38,13 +38,13 @@ retorna um Json:
         "instagram": "@bandaanabela",
         "twitter": "-",
         "__v": 0
-    }
+    }```
 ]
 
 http://localhost:8080/bands?style=Pop
 
 [
-    {
+    ```{
         "venue": [
             "Mafuá do Januário",
             "riomar"
@@ -56,13 +56,13 @@ http://localhost:8080/bands?style=Pop
         "instagram": "@bandaanabela",
         "twitter": "-",
         "__v": 0
-    }
+    }```
 ]
 
 http://localhost:8080/bands?style=Pop&city=Recife
 
 [
-    {
+    ```{
         "venue": [
             "Mafuá do Januário",
             "riomar"
@@ -74,13 +74,13 @@ http://localhost:8080/bands?style=Pop&city=Recife
         "instagram": "@bandaanabela",
         "twitter": "-",
         "__v": 0
-    }
+    }```
 ]
 
 http://localhost:8080/bands?venue=rock n ribs
 
 [
-    {
+    ```{
         "venue": [
             "rock n ribs",
             "riomar"
@@ -92,14 +92,14 @@ http://localhost:8080/bands?venue=rock n ribs
         "instagram": "@papaninfa_oficial",
         "twitter": "-",
         "__v": 0
-    }
+    }```
 ]
 
  - Post: 
  Para criação, você precisará de autorização. O parâmetro "Authorization" do header precisa estar preenchido.
 
 body:
-    {
+    ```{
         "name":"SoulSin",
         "city": "Fortaleza", 
         "style": "Pop Rock",
@@ -107,12 +107,12 @@ body:
         "twitter": "-",
         "venue": "Hard Rock Café Fortaleza"
         
-    }
+    }```
 
 response:
     201: a banda foi criada
       payload: 
-         {
+        ``` {
         "name":"SoulSin",
         "city": "Fortaleza", 
         "style": "Pop Rock",
@@ -120,6 +120,8 @@ response:
         "twitter": "-",
         "venue": "Hard Rock Café Fortaleza"
         
-    }
+    }```
         500: Authorization header missing
 
+ - Delete:
+ Para deletar a banda que está cadastrada.
