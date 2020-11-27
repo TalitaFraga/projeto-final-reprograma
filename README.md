@@ -101,7 +101,8 @@ http://localhost:8080/bands?venue=rock n ribs
  Para criação, você precisará de autorização. O parâmetro "Authorization" do header precisa estar preenchido.
 
 body:
-    ```{
+    ```
+    {
         "name":"SoulSin",
         "city": "Fortaleza", 
         "style": "Pop Rock",
@@ -123,7 +124,8 @@ response:
         "twitter": "-",
         "venue": "Hard Rock Café Fortaleza"
         
-    } ```
+    } 
+    ```
 
         500: Authorization header missing
 
