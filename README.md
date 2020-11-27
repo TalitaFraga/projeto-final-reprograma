@@ -92,10 +92,12 @@ http://localhost:8080/bands?venue=rock n ribs
         "instagram": "@papaninfa_oficial",
         "twitter": "-",
         "__v": 0
-    }```
+    }
 ]
+```
 
- - Post: 
+- Post: 
+
  Para criação, você precisará de autorização. O parâmetro "Authorization" do header precisa estar preenchido.
 
 body:
@@ -120,7 +122,8 @@ response:
         "twitter": "-",
         "venue": "Hard Rock Café Fortaleza"
         
-    }```
+    }
+    ```
         500: Authorization header missing
 
  - Delete:
