@@ -40,10 +40,11 @@ retorna um Json:
         "__v": 0
     }
 ]
+```
 
 http://localhost:8080/bands?style=Pop
 
-[
+```[
     {
         "venue": [
             "Mafuá do Januário",
@@ -58,10 +59,11 @@ http://localhost:8080/bands?style=Pop
         "__v": 0
     }
 ]
+```
 
 http://localhost:8080/bands?style=Pop&city=Recife
 
-[
+```[
     {
         "venue": [
             "Mafuá do Januário",
@@ -76,10 +78,11 @@ http://localhost:8080/bands?style=Pop&city=Recife
         "__v": 0
     }
 ]
+```
 
 http://localhost:8080/bands?venue=rock n ribs
 
-[
+```[
     {
         "venue": [
             "rock n ribs",
