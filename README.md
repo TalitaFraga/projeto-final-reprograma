@@ -7,10 +7,13 @@
 
 ## Band: 
  
-- GET: 
+- Listar as bandas: 
+
+/GET
+
 query params: pode ser feita a busca por style, name, city e veneu 
 
--- http://localhost:8080/bands
+-- /bands
 retorna um Json:
 ```
 [
@@ -43,7 +46,7 @@ retorna um Json:
 ]
 ```
 
--- http://localhost:8080/bands?style=Pop
+-- /bands?style=Pop
 
 ```[
     {
@@ -62,7 +65,7 @@ retorna um Json:
 ]
 ```
 
--- http://localhost:8080/bands?style=Pop&city=Recife
+-- /bands?style=Pop&city=Recife
 
 ```[
     {
@@ -81,7 +84,7 @@ retorna um Json:
 ]
 ```
 
--- http://localhost:8080/bands?venue=rock n ribs
+-- /bands?venue=rock n ribs
 
 ```[
     {
@@ -100,7 +103,9 @@ retorna um Json:
 ]
 ```
 
-- Post: 
+- Cadastrar uma banda:
+
+/POST
 
  Para criação, você precisará de autorização. O parâmetro "Authorization" do header precisa estar preenchido.
 
@@ -134,8 +139,11 @@ response:
     
 
         500: Authorization header missing
+/
+ - Deletar uma banda:
 
- - DELETE:
+/DELETE
+
  Para deletar a banda que está cadastrada, você precisará de uma autorização. O parâmetro "Authorization" do header precisa estar preenchido. Através do ID deletaremos a banda desejada.
 
  500 : mensagem: "FAIL"
@@ -144,7 +152,10 @@ response:
 
  200 (se não houver a banda): "No band to be removed"
 
- - PUT: 
+ - Atualizar uma banda:
+
+ /PUT
+
  Para atualizar uma banda cadastrada você precisará de uma autorização. O parâmetro "Authorization" do header precisa estar preenchido.
 
  Através do ID iremos pegar a banda para atualizar o que queremos. No body passaremos os pontos que serão atualizados.
@@ -158,11 +169,13 @@ response:
 
     }
 
-- authController:
+## authController:
 
 Terá um signup e um login para o usuário entrar na conta. Criando um código de autorização para o usário registrar, deletar ou modificar o registro.
 
-    
+/POST
+
+Usuário e senha será passado para entrar na conta da banda. 
 
 
 
