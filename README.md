@@ -5,6 +5,7 @@
  - API Rest de bandas musicais independentes para divulgar os locais onde essas bandas se apresentam. Auxiliar o usuário a encontrar locais e bandas do seu gosto musical na cidade onde está presente.
 
 
+
 ## Band: 
  
 - Listar as bandas: 
@@ -103,11 +104,17 @@ retorna um Json:
 ]
 ```
 
+## Authorization
+
+Nas rotas autorizadas ("Authorization") necessário colocar o Bearer e o token que será gerado quando for feito o login. O PUT, DELETE e o POST são rotas que necessitarão de autorização para serem manipuladas.
+
+
 - Cadastrar uma banda:
 
 /POST
 
  Para criação, você precisará de autorização. O parâmetro "Authorization" do header precisa estar preenchido.
+
 
 body:
 

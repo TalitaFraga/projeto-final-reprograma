@@ -94,7 +94,7 @@ const putBands = (req, res) => {
         const id = req.params.id
 
         bands.find({ id }), function(err, band) {
-            if(band.length> 0) {
+            if(band.length > 0) {
                 bands.updateMany({ id }, { $set: req.body}, function(err) {
                     if(err) {
                         res.status(500).send ({ message: err.message})
