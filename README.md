@@ -179,12 +179,12 @@ Usuário e senha será passado para entrar na conta da banda.
 
 body:
 
-{
+    {
 
     "email": "SoulSin"
     "password": 123456
-    
-}
+
+    }
 
 
 
