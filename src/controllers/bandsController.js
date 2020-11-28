@@ -89,4 +89,23 @@ const deleteBand = (req, res) => {
     })
 }
 
-module.exports = { getAll, postBand, deleteBand }
+const putBands = (req, res) => {
+    authorizeAndRun(req, res, () => {
+        const id = req.params.id
+
+        bands.find({ id }), function(err, band) {
+            if(band.length> 0) {
+                bands.updateMany({ id }, { $set: req.body}, function(err) {
+                    if(err) {
+                        res.status(500).send ({ message: err.message})
+                    }
+                        res.status(200).send({ message: "record successfully changed"})
+                })
+            }else {
+                res.status(200).send({ message: "Não há registros para serem atualizados com esse id"})
+            }
+        }
+    })
+}
+
+module.exports = { getAll, postBand, deleteBand, putBands }

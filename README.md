@@ -101,6 +101,7 @@ http://localhost:8080/bands?venue=rock n ribs
  Para criação, você precisará de autorização. O parâmetro "Authorization" do header precisa estar preenchido.
 
 body:
+
     ```
     {
         "name":"SoulSin",
@@ -116,6 +117,7 @@ body:
 response:
     201: a banda foi criada
       payload: 
+
     ```
     {
         "name":"SoulSin",
@@ -129,5 +131,32 @@ response:
 
         500: Authorization header missing
 
- - Delete:
- Para deletar a banda que está cadastrada.
+ - DELETE:
+ Para deletar a banda que está cadastrada, você precisará de uma autorização. O parâmetro "Authorization" do header precisa estar preenchido.
+
+ 500 : mensagem: "FAIL"
+
+ 200: "Band successfully removed"
+
+ 200 (se não houver a banda): "No band to be removed"
+
+ - PUT: 
+ Para atualizar uma banda cadastrada você precisará de uma autorização. O parâmetro "Authorization" do header precisa estar preenchido.
+
+ Através do ID iremos pegar a banda para atualizar o que queremos. No body passaremos os pontos que serão atualizados.
+
+ body:
+
+    ```
+    {
+        "name":"SoulSin",
+        "city": "Fortaleza/CE"
+
+    }
+    ```
+
+
+
+
+
+
