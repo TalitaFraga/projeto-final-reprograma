@@ -138,8 +138,10 @@ response:
     } 
     
 
-        500: Authorization header missing
-/
+        
+        
+500: Authorization header missing
+
  - Deletar uma banda:
 
 /DELETE
@@ -178,6 +180,8 @@ Terá um signup e um login para o usuário entrar na conta. Criando um código d
 Usuário e senha será passado para entrar na conta da banda. 
 
 body:
+
+-- /login
 
     {
 
