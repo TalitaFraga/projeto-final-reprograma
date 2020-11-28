@@ -132,7 +132,7 @@ response:
         500: Authorization header missing
 
  - DELETE:
- Para deletar a banda que está cadastrada, você precisará de uma autorização. O parâmetro "Authorization" do header precisa estar preenchido.
+ Para deletar a banda que está cadastrada, você precisará de uma autorização. O parâmetro "Authorization" do header precisa estar preenchido. Através do ID deletaremos a banda desejada.
 
  500 : mensagem: "FAIL"
 
