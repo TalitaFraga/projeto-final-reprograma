@@ -102,7 +102,7 @@ http://localhost:8080/bands?venue=rock n ribs
 
 body:
 
-    ```
+    
     {
         "name":"SoulSin",
         "city": "Fortaleza", 
@@ -111,14 +111,14 @@ body:
         "twitter": "-",
         "venue": "Hard Rock Café Fortaleza"
     }
-    ```
+    
     
 
 response:
     201: a banda foi criada
       payload: 
 
-    ```
+    
     {
         "name":"SoulSin",
         "city": "Fortaleza", 
@@ -127,7 +127,7 @@ response:
         "twitter": "-",
         "venue": "Hard Rock Café Fortaleza"
     } 
-    ```
+    
 
         500: Authorization header missing
 
@@ -147,13 +147,13 @@ response:
 
  body:
 
-    ```
+    
     {
         "name":"SoulSin",
         "city": "Fortaleza/CE"
 
     }
-    ```
+    
 
 
 
