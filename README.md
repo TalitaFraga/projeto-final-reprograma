@@ -13,7 +13,7 @@
 
 query params: pode ser feita a busca por style, name, city e veneu 
 
--- /bands
+### /bands
 retorna um Json:
 ```
 [
@@ -46,7 +46,7 @@ retorna um Json:
 ]
 ```
 
--- /bands?style=Pop
+### /bands?style=Pop
 
 ```[
     {
@@ -65,7 +65,7 @@ retorna um Json:
 ]
 ```
 
--- /bands?style=Pop&city=Recife
+### /bands?style=Pop&city=Recife
 
 ```[
     {
@@ -84,7 +84,7 @@ retorna um Json:
 ]
 ```
 
--- /bands?venue=rock n ribs
+### /bands?venue=rock n ribs
 
 ```[
     {
@@ -179,9 +179,11 @@ Terá um signup e um login para o usuário entrar na conta. Criando um código d
 
 Usuário e senha será passado para entrar na conta da banda. 
 
+### /login
+### /signup
+
 body:
 
--- /login
 
     {
 
