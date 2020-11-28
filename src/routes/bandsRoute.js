@@ -5,7 +5,7 @@ const controller = require("../controllers/bandsController")
 
 router.get("/", controller.getAll)
 router.post("/", controller.postBand)
-router.delete("/:name", controller.deleteBand)
+router.delete("/:id", controller.deleteBand)
 router.put("/:id", controller.putBands)
 
 module.exports = router

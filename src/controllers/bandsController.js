@@ -65,9 +65,9 @@ const deleteBand = (req, res) => {
     authorizeAndRun(req, res, () => {
         const id = req.params.id
 
-        bands.find({ id }, function(err, band) {
+        bands.find({ _id: id }, function(err, band) {
             if(band.length > 0){
-                bands.deleteMany({ id }, function(err) {
+                bands.deleteMany({ _id: id }, function(err) {
                     if(err) {
                         res.status(500).send({
                             message: err.message,
@@ -92,20 +92,22 @@ const deleteBand = (req, res) => {
 const putBands = (req, res) => {
     authorizeAndRun(req, res, () => {
         const id = req.params.id
-
-        bands.find({ id }), function(err, band) {
+        
+        bands.find({ _id: id }, function(err, band) {
+            console.log(id, err, band)
             if(band.length > 0) {
-                bands.updateMany({ id }, { $set: req.body}, function(err) {
+                bands.updateMany({ _id: id }, { $set: req.body}, function(err) {
                     if(err) {
                         res.status(500).send ({ message: err.message})
                     }
-                        res.status(200).send({ message: "record successfully changed"})
+                        res.status(200).send({ message: "registry successfully changed"})
                 })
             }else {
-                res.status(200).send({ message: "Não há registros para serem atualizados com esse id"})
+                res.status(200).send({ message: "There are no registry to update with this id"})
             }
-        }
+        })
     })
 }
+
 
 module.exports = { getAll, postBand, deleteBand, putBands }
