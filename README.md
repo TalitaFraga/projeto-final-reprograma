@@ -10,7 +10,7 @@
 - GET: 
 query params: pode ser feita a busca por style, name, city e veneu 
 
-http://localhost:8080/bands
+-- http://localhost:8080/bands
 retorna um Json:
 ```[
     {
@@ -42,7 +42,7 @@ retorna um Json:
 ]
 ```
 
-http://localhost:8080/bands?style=Pop
+-- http://localhost:8080/bands?style=Pop
 
 ```[
     {
@@ -61,7 +61,7 @@ http://localhost:8080/bands?style=Pop
 ]
 ```
 
-http://localhost:8080/bands?style=Pop&city=Recife
+-- http://localhost:8080/bands?style=Pop&city=Recife
 
 ```[
     {
@@ -80,7 +80,7 @@ http://localhost:8080/bands?style=Pop&city=Recife
 ]
 ```
 
-http://localhost:8080/bands?venue=rock n ribs
+-- http://localhost:8080/bands?venue=rock n ribs
 
 ```[
     {
