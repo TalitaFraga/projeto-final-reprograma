@@ -158,7 +158,8 @@ response:
 
     }
 
-- authController
+- authController:
+
 Terá um signup e um login para o usuário entrar na conta. Criando um código de autorização para o usário registrar, deletar ou modificar o registro.
 
     
