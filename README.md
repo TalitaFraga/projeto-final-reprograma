@@ -12,7 +12,8 @@ query params: pode ser feita a busca por style, name, city e veneu
 
 -- http://localhost:8080/bands
 retorna um Json:
-```[
+```
+[
     {
         "venue": [
             "rock n ribs",
