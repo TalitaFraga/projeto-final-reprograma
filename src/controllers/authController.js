@@ -16,11 +16,11 @@ const validatePassword = (password) => {
 const signup = (req, res) => {
 
     if(!validateEmail(req.body.email)) {
-        res.status(400).send("This email is not valid")
+        return res.status(400).send("This email is not valid")
     }
 
     if(!validatePassword(req.body.password)) {
-        res.status(400).send("This password is not valid")
+        return res.status(400).send("This password is not valid")
     } 
 
     const passwordHash = bcrypt.hashSync(req.body.password, 10)
