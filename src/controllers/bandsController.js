@@ -27,16 +27,16 @@ const authorizeAndRun = (req, res, doAction) => {
 const getAll = (req, res) => {
     const searchParams = {}
     if (req.query.style) {
-        searchParams.style = req.query.style
+        searchParams.style = new RegExp(req.query.style, 'i')
     }
     if(req.query.name) {
-        searchParams.name = req.query.name
+        searchParams.name = new RegExp(req.query.name, 'i')
     }
     if(req.query.city) {
-        searchParams.city = req.query.city
+        searchParams.city = new RegExp(req.query.city, 'i') 
     }
     if(req.query.venue) {
-        searchParams.venue = req.query.venue
+        searchParams.venue = new RegExp(req.query.venue, 'i')
     }
 
     bands.find(searchParams, function(err, bands) {
