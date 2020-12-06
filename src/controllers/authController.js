@@ -8,11 +8,20 @@ const validateEmail = (email) => {
     return re.test(email);
 }
 
+const validatePassword = (password) => {
+    const re = /[a-z]\d|\d[a-z]/i
+    return re.test(password) && password.length >= 6
+}
+
 const signup = (req, res) => {
 
     if(!validateEmail(req.body.email)) {
-        res.status(404).send("This email is not valid")
+        res.status(400).send("This email is not valid")
     }
+
+    if(!validatePassword(req.body.password)) {
+        res.status(400).send("This password is not valid")
+    } 
 
     const passwordHash = bcrypt.hashSync(req.body.password, 10)
     req.body.password = passwordHash
