@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cadastro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400"
+      rel="stylesheet"
+    />
+    <script defer src="signup.js"></script>
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+  </head>
+
+  <body>
+    <div id="form_wrapper">
+      <form id="signup_form">
+        <h2>Cadastro</h2>
+        <div class="input_container">
+          <i class="fas fa-envelope"></i>
+          <input
+            placeholder="Email"
+            type="email"
+            name="email"
+            id="field_email"
+            class="input_field"
+          />
+        </div>
+        <div class="input_container">
+          <i class="fas fa-lock"></i>
+          <input
+            placeholder="Password"
+            type="password"
+            name="password"
+            id="field_password"
+            class="input_field"
+          />
+        </div>
+        <button type="submit" id="input_signup_submit" class="input_field">
+          Cadastrar
+        </button>
+        <div id="login_account">
+          Já tem uma conta? <a href="login.html">Entre.</a>
+        </div>
+        <div id="back_to_home">
+          <a href="index.html">Voltar para a página inicial.</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
