@@ -3,7 +3,17 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const SECRET = process.env.SECRET
 
+const validateEmail = (email) => {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
 const signup = (req, res) => {
+
+    if(!validateEmail(req.body.email)) {
+        res.status(404).send("This email is not valid")
+    }
+
     const passwordHash = bcrypt.hashSync(req.body.password, 10)
     req.body.password = passwordHash
     let band = new bandUser(req.body)
@@ -18,12 +28,12 @@ const signup = (req, res) => {
 const login = (req, res) => {
     bandUser.findOne({email:req.body.email}, function(error, band){
         if(!band) {
-            return res.status(404).send(`Não existe usuário com o email ${req.body.email}`)
+            return res.status(404).send(`No user with email ${req.body.email}`)
         }
         const validPassword = bcrypt.compareSync(req.body.password, band.password)
 
         if(!validPassword) {
-            return res.status(403).send("senha inválida")
+            return res.status(403).send("invalid password")
         }
 
         const token = jwt.sign({ email: req.body.email}, SECRET)
