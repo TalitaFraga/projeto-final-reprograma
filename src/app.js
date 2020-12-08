@@ -35,4 +35,6 @@ app.use(function (req, res, next) {
 app.use("/bands", bands)
 app.use("/", bandUser)
 
+app.use(express.static('public'))
+
 module.exports = app
