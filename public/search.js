@@ -4,16 +4,17 @@ const searchForm = document.getElementById("search_form");
 const searchButton = document.getElementById("input_search_submit");
 const resultsTable = document.getElementById("search_results_table");
 
-const linksDiv = document.getElementById("login_signup_links");
+const notLoggedInDiv = document.getElementById("not_logged_div");
+const loggedInDiv = document.getElementById("logged_div");
 const logoutButton = document.getElementById("logout_button");
 
 const dataFields = ["name", "city", "style", "venue", "instagram", "twitter"];
 
 // show the correct header if user is logged in
 if (localStorage.getItem("token")) {
-  linksDiv.style.display = "none";
+  notLoggedInDiv.style.display = "none";
 } else {
-  logoutButton.style.display = "none";
+  loggedInDiv.style.display = "none";
 }
 
 // handles logout
