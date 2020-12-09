@@ -22,21 +22,32 @@ const authorizeAndRun = (req, res, doAction) => {
     })
 }
 
+const buildRegex = word => {
+    let regexString = word.replace(new RegExp(/a/g), '[aàáâãäå]')
+    regexString = regexString.replace(new RegExp(/e/g), '[eèéêë]')
+    regexString = regexString.replace(new RegExp(/i/g), '[iìíîï]')
+    regexString = regexString.replace(new RegExp(/o/g), '[oòóôõö]')
+    regexString = regexString.replace(new RegExp(/u/g), '[uùúûü]')
+    regexString = regexString.replace(new RegExp(/ç/g), '[cç]')
+    regexString = regexString.replace(new RegExp(/n/g), '[nñ]')
+    return new RegExp(regexString, 'i')
+    }
+
 
 
 const getAll = (req, res) => {
     const searchParams = {}
     if (req.query.style) {
-        searchParams.style = new RegExp(req.query.style, 'i')
+        searchParams.style = buildRegex(req.query.style, 'i')
     }
     if(req.query.name) {
-        searchParams.name = new RegExp(req.query.name, 'i')
+        searchParams.name = buildRegex(req.query.name, 'i')
     }
     if(req.query.city) {
-        searchParams.city = new RegExp(req.query.city, 'i') 
+        searchParams.city = buildRegex(req.query.city, 'i') 
     }
     if(req.query.venue) {
-        searchParams.venue = new RegExp(req.query.venue, 'i')
+        searchParams.venue = buildRegex(req.query.venue, 'i')
     }
 
     bands.find(searchParams, function(err, bands) {
