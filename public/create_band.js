@@ -1,4 +1,4 @@
-const CREATE_URL = "http://projeto-final-talita.herokuapp.com/bands";
+const CREATE_URL = "https://projeto-final-talita.herokuapp.com/bands";
 
 const createForm = document.getElementById("create_form");
 const createButton = document.getElementById("input_create_submit");

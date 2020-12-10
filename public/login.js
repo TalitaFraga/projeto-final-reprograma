@@ -1,4 +1,4 @@
-const LOGIN_URL = "http://projeto-final-talita.herokuapp.com/login";
+const LOGIN_URL = "https://projeto-final-talita.herokuapp.com/login";
 
 const loginForm = document.getElementById("login_form");
 const loginButton = document.getElementById("input_login_submit");

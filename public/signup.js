@@ -1,4 +1,4 @@
-const SIGNUP_URL = "http://projeto-final-talita.herokuapp.com/signup";
+const SIGNUP_URL = "https://projeto-final-talita.herokuapp.com/signup";
 
 const signupForm = document.getElementById("signup_form");
 const signupButton = document.getElementById("input_signup_submit");

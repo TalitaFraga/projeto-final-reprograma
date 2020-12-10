@@ -1,4 +1,4 @@
-const BASE_SEARCH_URL = "http://projeto-final-talita.herokuapp.com/bands";
+const BASE_SEARCH_URL = "https://projeto-final-talita.herokuapp.com/bands";
 
 const searchForm = document.getElementById("search_form");
 const searchButton = document.getElementById("input_search_submit");
