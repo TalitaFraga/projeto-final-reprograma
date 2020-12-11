@@ -4,6 +4,14 @@
 
  - API Rest de bandas musicais independentes para divulgar os locais onde essas bandas se apresentam. Auxiliar o usuário a encontrar locais e bandas do seu gosto musical na cidade onde está presente.
 
+ ### Dependecias utilizadas no projeto:
+    bcrypt
+    dotenv-safe
+    express
+    jsonwebtoken
+    mongoose
+    nodemon
+
 
 
 ## Band: 
