@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bandas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400"
+      rel="stylesheet"
+    />
+    <script defer src="search.js"></script>
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+  </head>
+
+  <body>
+    <div id="not_logged_div">
+      <a href="login.html">Entrar</a>
+      <a href="signup.html">Cadastrar-se</a>
+    </div>
+
+    <div id="logged_div">
+      <button id="logout_button">Sair</button>
+      <a href="create_band.html">Criar banda</a>
+    </div>
+
+    <div id="form_wrapper">
+      <form id="search_form">
+        <h2>Busque por bandas</h2>
+        <div class="input_container">
+          <i class="fas fa-user-friends"></i>
+          <input
+            placeholder="Nome"
+            name="name"
+            id="field_name"
+            class="input_field"
+          />
+        </div>
+        <div class="input_container">
+          <i class="fas fa-music"></i>
+          <input
+            placeholder="Estilo"
+            name="style"
+            id="field_city"
+            class="input_field"
+          />
+        </div>
+        <div class="input_container">
+          <i class="fas fa-map-marker-alt"></i>
+          <input
+            placeholder="Cidade"
+            name="city"
+            id="field_city"
+            class="input_field"
+          />
+        </div>
+        <div class="input_container">
+          <i class="fas fa-map-marked-alt"></i>
+          <input
+            placeholder="Locais de shows"
+            name="venue"
+            id="field_city"
+            class="input_field"
+          />
+        </div>
+        <input
+          type="submit"
+          value="Buscar"
+          id="input_search_submit"
+          class="input_field"
+        />
+      </form>
+    </div>
+
+    <table id="search_results_table"></table>
+  </body>
+</html>

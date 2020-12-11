@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Criar banda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400"
+      rel="stylesheet"
+    />
+    <script defer src="create_band.js"></script>
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+  </head>
+
+  <body>
+    <div id="form_wrapper">
+      <form id="create_form">
+        <h2>Criar banda</h2>
+        <div class="input_container">
+          <i class="fas fa-user-friends"></i>
+          <input
+            placeholder="Nome"
+            name="name"
+            id="field_name"
+            class="input_field"
+          />
+        </div>
+        <div class="input_container">
+          <i class="fas fa-music"></i>
+          <input
+            placeholder="Estilo"
+            name="style"
+            id="field_style"
+            class="input_field"
+          />
+        </div>
+        <div class="input_container">
+          <i class="fas fa-map-marker-alt"></i>
+          <input
+            placeholder="Cidade"
+            name="city"
+            id="field_city"
+            class="input_field"
+          />
+        </div>
+        <div class="input_container">
+          <i class="fas fa-images"></i>
+          <input
+            placeholder="Instagram"
+            name="instagram"
+            id="field_instagram"
+            class="input_field"
+          />
+        </div>
+        <div class="input_container">
+          <i class="fas fa-landmark"></i>
+          <input
+            placeholder="Locais de shows (separados por vírgula)"
+            name="venues"
+            id="field_venues"
+            class="input_field"
+          />
+        </div>
+        <input
+          type="submit"
+          value="Cadastrar"
+          id="input_create_submit"
+          class="input_field"
+        />
+        <div id="back_to_home">
+          <a href="index.html">Voltar para a página inicial.</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
