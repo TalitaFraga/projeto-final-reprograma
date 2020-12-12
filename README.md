@@ -12,6 +12,10 @@
     mongoose
     nodemon
 
+### Link do heroku
+
+https://projeto-final-talita.herokuapp.com/
+
 
 
 ## Band: 
