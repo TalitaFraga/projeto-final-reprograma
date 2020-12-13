@@ -1,5 +1,9 @@
 # projeto-final-reprograma
 
+## Projeto de divulgação de Bandas Locais
+
+![alt text](https://github.com/[TalitaFraga]/[projeto-final-reprograma]/blob/[main]/band.jpg?raw=true)
+
 ### Projeto final do curso de back-end - Reprograma
 
  - API Rest de bandas musicais independentes para divulgar os locais onde essas bandas se apresentam. Auxiliar o usuário a encontrar locais e bandas do seu gosto musical na cidade onde está presente.
