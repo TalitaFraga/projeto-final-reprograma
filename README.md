@@ -2,7 +2,7 @@
 
 ## Projeto de divulgação de Bandas Locais
 
-![alt text](http://urlhttps://github.com/TalitaFraga/projeto-final-reprograma/to/band.jpg)
+![alt text](http://https://github.com/TalitaFraga/projeto-final-reprograma/to/band.jpg)
 
 ### Projeto final do curso de back-end - Reprograma
 
