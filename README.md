@@ -2,6 +2,9 @@
 
 ## Projeto de divulgação de Bandas Locais
 
+![band](https://user-images.githubusercontent.com/69424132/102014904-28af3a00-3d37-11eb-8dde-453e342fb582.jpg)
+
+
 
 ### Projeto final do curso de back-end - Reprograma
 
